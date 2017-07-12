@@ -1,0 +1,22 @@
+<div class="poll-box" ng-repeat="QuestionData in QuestionList">
+    <div class="poll-box-title">
+        {{QuestionData.Content }}
+    </div>
+    <div ng-if="QuestionData.QuestionType=='M'">
+        <div ng-repeat="answer in QuestionData.Answers">
+            <label class="poll-label" for="{{answer.AnswerId}}">
+                <input class="poll-radio poll-checkbox" id="{{answer.AnswerId}}" type="checkbox" ng-model="answer.Checked">{{answer.Content}}
+                <span></span>
+            </label>
+        </div>
+    </div>
+    <div ng-if="QuestionData.QuestionType=='S'">
+        <div ng-repeat="answer in QuestionData.Answers">
+            <label class="poll-label" for="{{answer.AnswerId}}">
+                <input class="poll-radio" type="radio" id="{{answer.AnswerId}}" name="answerRadio-{{QuestionData.QuestionId}}" value="{{answer.AnswerId}}" ng-model="QuestionData.AnswerId">{{answer.Content}}
+                <span></span>
+            </label>
+        </div>
+    </div>
+</div>
+<button class="poll-btn poll-btn-success" ng-click="EndPoll()" ng-hide="ShowNextQuestionButton">Anketi Bitir</button>

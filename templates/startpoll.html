@@ -1,0 +1,29 @@
+<div>
+    <div class="poll-box">
+        <div ng-repeat="field in FieldList">
+            <!--{{field.FieldTitle}} :-->
+
+            <span ng-if="field.FieldType=='text'">
+                <input class="poll-input" type="text" ng-model="field.FieldValue" placeholder="{{field.FieldTitle}}">
+            </span>
+                <span ng-if="field.FieldType=='int'">
+                <input class="poll-input" type="number" ng-model="field.FieldValue" placeholder="{{field.FieldTitle}}">
+            </span>
+                <span ng-if="field.FieldType=='date'">
+                <input class="poll-input" type="date" ng-model="field.FieldValue" placeholder="{{field.FieldTitle}}">
+            </span>
+                <span ng-if="field.FieldType=='time'">
+                <input class="poll-input" type="time" ng-model="field.FieldValue" placeholder="{{field.FieldTitle}}">
+            </span>
+                <span ng-if="field.FieldType=='mail'">
+                <input class="poll-input" type="email" ng-model="field.FieldValue" placeholder="{{field.FieldTitle}}">
+            </span>
+                <span ng-if="field.FieldType=='phone'">
+                <input class="poll-input" type="text" ng-model="field.FieldValue" ui-mask="{{'(999) 999-9999'}}">
+            </span>
+
+        </div>
+        <button class="poll-btn poll-btn-primary" ng-click="StartPoll()">Basla</button>
+    </div>
+
+</div>
