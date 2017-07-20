@@ -4,6 +4,7 @@ Uygulama hakkında detaylı bilgi almak için blog'daki yazı dizisini okuyabili
 Bu sayfada sadece repo ile ilgili bilgi verilecektir.
 Blog'a erişmek için : 
 http://dotnetlife.com/pollman-anket-uygulamasi/
+
 WebPanel Hakkında
 =
 Pollman/webpanel uygulaması anket oluşturmak ve anketlerinizi yönetmek için geliştirilmiş olan web yönetim uygulamasıdır. Bu uygulamada anketlerini görüntüleyip düzenleyip çıktı raporları alabilirsiniz. Teknolojisinden aşağıda bahsedilmiştir.
